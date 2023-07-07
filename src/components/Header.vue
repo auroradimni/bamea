@@ -14,7 +14,7 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 export default {
   name: 'Header',
@@ -34,7 +34,7 @@ div.header {
   justify-content: right;
   gap: 50px;
   position: fixed;
-  top: 0;
+  top: 30px;
   max-height: 50px;
   background: transparent;
   left: 0;
@@ -45,7 +45,7 @@ div.header {
 }
 div.logo {
   height: 50px;
-  top: 5;
+  top: 0;
   left: 0;
   justify-content: left;
   position: absolute;
