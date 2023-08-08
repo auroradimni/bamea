@@ -1,0 +1,22 @@
+/**
+ * @author Ardit Qerosi -FullStack
+ * @author Aurora Dimni -FrontEnd
+ * @designer Megi Qerosi
+ */
+
+@import '@/scss/variables/variables';
+@import '@/scss/functions/functions';
+@import '@/scss/mixins/mixins';
+
+html {
+  body {
+    background-color: mapget($colors, 'white');
+    a:hover {
+      color: rgb(39, 117, 154) !important;
+      background-color: unset;
+    }
+  }
+  color-scheme: only light !important;
+}
+
+@import '@/scss/animations/animations';

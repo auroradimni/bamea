@@ -1,14 +1,6 @@
-<script setup lang="ts">
-import Header from './components/Header.vue'
-</script>
+<style lang="scss">
+@import '@/scss/app';
 
-<template>
-  <Header />
-  <div class="rounded-corner"></div>
-  <div class="rounded-cornerright"></div>
-  <div class="top-corner"></div>
-</template>
-<style scoped>
 div.rounded-corner {
   position: fixed;
   bottom: -20px;
@@ -51,3 +43,14 @@ div.top-corner {
   opacity: 1;
 }
 </style>
+
+<script setup lang="ts">
+import Header from '@/components/Header.vue'
+</script>
+
+<template>
+  <Header />
+  <div class="rounded-corner"></div>
+  <div class="rounded-cornerright"></div>
+  <div class="top-corner"></div>
+</template>

@@ -1,21 +1,20 @@
 <template>
   <div class="contact">
     <h3 class="title">Contact us</h3>
-    <div>
-      <div class="image-holder">
-        <img src="../assets/download.webp" alt="logo" />
-      </div>
+    <div class="logo-holder">
+      <h1 class="color-primary" style="font-family: Segoe Script">Bamea</h1>
+      <p class="color-black" style="font-family: Papyrus">good things take time</p>
     </div>
 
     <div class="icon-holder">
-      <a href=""> <img class="icons" src="../assets/ig.jpg" alt="instagram" /></a>
-      <a href=""><img class="icons" src="../assets/pi.png" alt="pinterest" /></a>
-      <a href=""><img class="icons" src="../assets/li.png" alt="linkedin" /></a>
+      <a href=""> <img class="icons" src="@/assets/ig.jpg" alt="instagram" /></a>
+      <a href=""><img class="icons" src="@/assets/pi.png" alt="pinterest" /></a>
+      <a href=""><img class="icons" src="@/assets/li.png" alt="linkedin" /></a>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {}
@@ -23,9 +22,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .contact {
-  box-shadow: 0 5px 10px 0 rgb(24, 120, 120);
+  box-shadow: 0 5px 10px mapget($colors, 'primary');
   max-width: 600px;
   margin: auto;
   text-align: center;
@@ -40,11 +39,11 @@ export default {
 }
 .title {
   text-align: center;
-  color: rgb(24, 120, 120);
-  font-style: italic;
-  font-family: cursive;
+  color: mapget($colors, 'primary');
+  font-style: normal;
+  font-family: 'Segoe Script';
 }
-.image-holder {
+.logo-holder {
   object-fit: scale-down;
   max-width: 300px;
   display: block;
@@ -52,10 +51,7 @@ export default {
   margin-right: auto;
   bottom: auto;
 }
-.image-holder img {
-  object-fit: scale-down;
-  max-width: 200px;
-}
+
 .icon-holder {
   display: flex;
   gap: 5%;
@@ -63,9 +59,9 @@ export default {
   right: 0;
 }
 .icons {
-  max-width: 30%;
-  max-height: 50%;
+  max-width: 50%;
+  max-height: 70%;
   object-fit: scale-down;
-  bottom: 0%;
+  bottom: -80%;
 }
 </style>

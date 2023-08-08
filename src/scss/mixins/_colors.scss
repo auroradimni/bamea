@@ -1,0 +1,27 @@
+@each $name, $color in $colors {
+  @each $key, $opac in $opacity {
+    .bg-color-#{$name} {
+      background-color: $color;
+      &-hover {
+        &:hover {
+          background-color: $color;
+        }
+        &-#{$key}:hover {
+          background-color: rgba($color, $opac);
+        }
+      }
+      &-#{$key} {
+        background-color: rgba($color, $opac);
+      }
+    }
+  }
+
+  .color-#{$name} {
+    color: $color;
+    &-hover {
+      &:hover {
+        color: $color;
+      }
+    }
+  }
+}
