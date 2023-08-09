@@ -1,9 +1,9 @@
 <template>
   <div class="contact">
     <h3 class="title">Contact us</h3>
-    <div class="logo-holder">
-      <h1 class="color-primary" style="font-family: Segoe Script">Bamea</h1>
-      <p class="color-black" style="font-family: Papyrus">good things take time</p>
+    <div>
+      <h1 class="logo1 color-primary">Bamea</h1>
+      <p class="moto1 color-black">good things take time</p>
     </div>
 
     <div class="icon-holder">
@@ -43,7 +43,7 @@ export default {
   font-style: normal;
   font-family: 'Segoe Script';
 }
-.logo-holder {
+.image-holder {
   object-fit: scale-down;
   max-width: 300px;
   display: block;
@@ -62,6 +62,6 @@ export default {
   max-width: 50%;
   max-height: 70%;
   object-fit: scale-down;
-  bottom: -80%;
+  bottom: -70%;
 }
 </style>

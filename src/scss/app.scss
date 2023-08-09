@@ -4,9 +4,11 @@
  * @designer Megi Qerosi
  */
 
+@import '@/scss/typography/typography';
 @import '@/scss/variables/variables';
 @import '@/scss/functions/functions';
 @import '@/scss/mixins/mixins';
+@import '@/scss/utilities/utilities';
 
 html {
   body {

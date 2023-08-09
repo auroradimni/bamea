@@ -1,19 +1,19 @@
 <template>
-  <header>
-    <div class="header" id="header">
+  <div class="header d-flex pad-xl-r pad-xl-l bg-color-white" id="header">
+    <div class="logo-holder">
+      <div class="logo">
+        <h1>Bamea</h1>
+      </div>
+      <p class="moto">good thing take time</p>
+    </div>
+    <div class="routers d-flex gap-md">
       <RouterLink :to="{ name: 'home' }">Home</RouterLink>
       <RouterLink :to="{ name: 'posts' }"> Posts</RouterLink>
       <RouterLink :to="{ name: 'about' }">About us</RouterLink>
       <RouterLink :to="{ name: 'contact' }">Contact us</RouterLink>
-
-      <div>
-        <div class="logo">
-          <h1>Bamea</h1>
-        </div>
-        <p class="moto">good thing take time</p>
-      </div>
     </div>
-  </header>
+    <div class="top-corner"></div>
+  </div>
   <RouterView />
 </template>
 
@@ -32,29 +32,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
-header {
-  div {
-    &.header {
-      & a {
-        color: mapget($colors, 'primary');
-      }
-      display: flex;
-      justify-content: right;
-      gap: 50px;
-      position: fixed;
-      top: 30px;
-      max-height: 50px;
-      left: 0;
-      right: 0;
-      text-size-adjust: 30px;
+.header {
+  z-index: 10;
+  box-shadow: 0px 3px 10px 0px #707070;
+
+  .routers {
+    & a {
       color: mapget($colors, 'primary');
-      padding: 20px;
     }
   }
+  justify-content: space-between;
+  gap: 50px;
+  position: fixed;
+  top: 0px;
+  max-height: 150px;
+  left: 0;
+  right: 0;
+  text-size-adjust: 30px;
+  color: mapget($colors, 'primary');
 
-  div {
-    &.logo {
-      position: fixed;
+  .logo-holder {
+    .logo {
       font-family: 'Segoe Script';
       font-weight: bold;
       font-style: normal;
@@ -65,17 +63,32 @@ header {
       left: 0;
       margin-left: 0.5%;
     }
+    .moto {
+      font-family: 'Papyrus';
+      font-weight: bold;
+      font-style: bold;
+      text-align: left;
+      color: #101108;
+      top: 5%;
+      left: 0;
+      margin-left: 0.5%;
+    }
   }
-}
-.moto {
-  position: fixed;
-  font-family: 'Papyrus';
-  font-weight: bold;
-  font-style: bold;
-  text-align: left;
-  color: #101108;
-  top: 5%;
-  left: 0;
-  margin-left: 0.5%;
+  div.top-corner {
+    position: fixed;
+    width: 1398px;
+    height: 400px;
+
+    border-color: #707070;
+    border-width: 1px;
+    border-style: solid;
+
+    background: #ada936;
+    top: -350px;
+    left: 500px;
+    right: 0%;
+    border-radius: 100%;
+    opacity: 1;
+  }
 }
 </style>

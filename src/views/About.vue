@@ -22,7 +22,6 @@
   max-width: 600px;
   margin: auto;
   text-align: center;
-  font-family: arial;
   height: 400px;
   right: 0%;
   left: 0%;
