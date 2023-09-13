@@ -1,6 +1,6 @@
 /**
- * @author Ardit Qerosi -FullStack
  * @author Aurora Dimni -FrontEnd
+  * @author Ardit Qerosi -FullStack
  * @designer Megi Qerosi
  */
 
@@ -12,9 +12,15 @@
 
 html {
   body {
+    margin: 0;
+    padding: 0;
     background-color: mapget($colors, 'white');
+
+    a {
+      text-decoration: none;
+    }
     a:hover {
-      color: rgb(39, 117, 154) !important;
+      color: rgb(4, 78, 113) !important;
       background-color: unset;
     }
   }

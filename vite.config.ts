@@ -15,6 +15,7 @@ export default defineConfig({
     }
   },
   css: {
+    devSourcemap: true,
     preprocessorOptions: {
       scss: {
         sourceMap: true, // Enable source maps

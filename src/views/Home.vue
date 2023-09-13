@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>home</div>
 </template>
 
 <script lang="ts">
@@ -10,4 +10,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

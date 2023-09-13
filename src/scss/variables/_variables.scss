@@ -1,9 +1,13 @@
 $colors: (
   'primary': #1f95a2,
   'secondary': #ada936,
-  'white': rgb(255, 255, 255),
+  'white': #ffffff,
   'black': black,
-  'hover': rgba(1, 52, 76, 0.963)
+  'hover': rgba(1, 52, 76, 0.963),
+  'lightestGray': #dddddd,
+  'gray': gray,
+  'coral-blue': #065267,
+  'light-blue': #1c7e98
 );
 
 $opacity: (
@@ -29,7 +33,7 @@ $break-points: (
 
 $font-sizes: (
   'xs': (
-    'default': 8px,
+    'default': 11px,
     'xxl': 'previous',
     'xl': 'previous',
     'md': 'previous',
@@ -38,7 +42,7 @@ $font-sizes: (
     'xs': 'previous'
   ),
   'sm': (
-    'default': 16px,
+    'default': 14px,
     'xxl': 'previous',
     'xl': 'previous',
     'lg': 'previous',
@@ -56,16 +60,16 @@ $font-sizes: (
     'xs': 15px
   ),
   'lg': (
-    'default': 30px,
-    'xxl': 'previous',
-    'xl': 'previous',
-    'lg': 'previous',
-    'md': 'previous',
-    'sm': 'previous',
+    'default': 28px,
+    'xxl': 24px,
+    'xl': 20px,
+    'lg': 18px,
+    'md': 16px,
+    'sm': 14px,
     'xs': 'previous'
   ),
   'xl': (
-    'default': 40px,
+    'default': 35px,
     'xxl': 'previous',
     'xl': 'previous',
     'lg': 'previous',
@@ -75,12 +79,12 @@ $font-sizes: (
   ),
   'xxl': (
     'default': 50px,
-    'xxl': 'previous',
-    'xl': 'previous',
-    'lg': 'previous',
-    'md': 'previous',
-    'sm': 'previous',
-    'xs': 'previous'
+    'xxl': 50px,
+    'xl': 45px,
+    'lg': 40px,
+    'md': 35px,
+    'sm': 30px,
+    'xs': 25px
   )
 );
 
@@ -104,7 +108,7 @@ $spacings: (
     'xs': 'previous'
   ),
   'md': (
-    'default': 20px,
+    'default': 23px,
     'xxl': 'previous',
     'xl': 22px,
     'lg': 20px,
@@ -113,16 +117,16 @@ $spacings: (
     'xs': 15px
   ),
   'lg': (
-    'default': 25px,
-    'xxl': 'previous',
-    'xl': 'previous',
-    'lg': 'previous',
-    'md': 'previous',
-    'sm': 'previous',
+    'default': 28px,
+    'xxl': 24px,
+    'xl': 20px,
+    'lg': 18px,
+    'md': 16px,
+    'sm': 14px,
     'xs': 'previous'
   ),
   'xl': (
-    'default': 28px,
+    'default': 35px,
     'xxl': 'previous',
     'xl': 'previous',
     'lg': 'previous',
@@ -131,12 +135,12 @@ $spacings: (
     'xs': 'previous'
   ),
   'xxl': (
-    'default': 30px,
-    'xxl': 'previous',
-    'xl': 'previous',
-    'lg': 'previous',
-    'md': 'previous',
-    'sm': 'previous',
-    'xs': 'previous'
+    'default': 50px,
+    'xxl': 50px,
+    'xl': 45px,
+    'lg': 40px,
+    'md': 35px,
+    'sm': 30px,
+    'xs': 25px
   )
 );

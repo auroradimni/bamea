@@ -1,38 +1,12 @@
 <style lang="scss">
 @import '@/scss/app';
-
-div.rounded-corner {
-  position: fixed;
-  bottom: -20px;
-  left: -20px;
-  width: 200px;
-  height: 30vh;
-  background-color: #000000;
-  border-top-right-radius: 300px;
-  overflow: hidden;
-}
-div.rounded-cornerright {
-  position: fixed;
-  bottom: -70px;
-  right: -80px;
-  width: 350px;
-  height: 60vh;
-  background-color: #065267;
-  border-top-left-radius: 400px;
-  overflow: hidden;
-  border-color: #707070;
-  border-width: 1px;
-  border-style: solid;
-  color: #0a6e89;
-}
 </style>
 
 <script setup lang="ts">
-import Header from '@/components/Header.vue'
+import MainLayout from '@/components/layouts/MainLayout.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <Header />
-  <div class="rounded-corner"></div>
-  <div class="rounded-cornerright"></div>
+  <main-layout> <router-view /> </main-layout>
 </template>
