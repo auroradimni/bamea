@@ -1,5 +1,5 @@
 <template>
-  <div class="main-layout pad-xxl-r pad-xxl-l">
+  <div class="main-layout pad-lg-r pad-lg-l">
     <VHeader />
     <div class="content">
       <slot> </slot>
