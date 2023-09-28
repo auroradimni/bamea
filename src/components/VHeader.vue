@@ -5,25 +5,7 @@
       <p class="moto font-size-xs">good thing take time</p>
     </div>
     <div class="desktop-nav">
-      <div class="routers d-flex gap-xs">
-        <RouterLink :to="{ name: 'home' }">Home</RouterLink>
-        <RouterLink :to="{ name: 'posts' }"> Posts</RouterLink>
-        <RouterLink :to="{ name: 'about' }">About us</RouterLink>
-        <div class="search-bar">
-          <input
-            ref="input"
-            class="input"
-            type="text"
-            v-model="search"
-            placeholder="Search..."
-            @input="filterItems"
-          />
-          <font-awesome-icon
-            class="font-awsome cursor-pointer"
-            :icon="['fas', 'magnifying-glass']"
-          />
-        </div>
-      </div>
+      <v-router />
     </div>
     <font-awesome-icon
       :icon="['fas', 'bars']"
@@ -32,6 +14,9 @@
     />
     <div class="mobile-nav holder" ref="mobile">
       <span class="cursor-pointer close color-black" @click="closeNav">X</span>
+      <v-router
+        class="mobile-routers router-holder flex-direction-column-reverse gap-xl pad-sm-l"
+      />
     </div>
     <div class="image-holder">
       <img class="image-top" src="@/assets/top.svg" />
@@ -40,21 +25,16 @@
 </template>
 
 <script lang="ts">
-import { RouterLink } from 'vue-router'
+import VRouter from '@/components/VRouter.vue'
 export default {
   name: 'VHeader',
   components: {
-    RouterLink
+    VRouter
   },
   data() {
-    return {
-      search: '' as string
-    }
+    return {}
   },
   methods: {
-    filterItems() {
-      console.log(this.search)
-    },
     openNav() {
       ;(this.$refs.mobile as HTMLDivElement).classList.add('show')
     },
@@ -71,36 +51,6 @@ export default {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-
-  .routers {
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 500px;
-    & a {
-      color: mapget($colors, 'primary');
-      z-index: 20;
-      justify-content: space-between;
-    }
-    .search-bar {
-      display: flex;
-      align-items: center;
-      border: mapget($colors, 'primary') solid 1px;
-      border-radius: 15px;
-      .font-awsome {
-        padding-right: 15px;
-      }
-      .input {
-        border: none;
-        padding-left: 10px;
-        border-radius: 15px;
-        max-width: 170px;
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-  }
 
   position: fixed;
   top: 0px;
@@ -143,7 +93,16 @@ export default {
       height: 100%;
     }
   }
+  .desktop-nav {
+    max-width: 500px;
+    width: 100%;
+  }
   .mobile-nav {
+    .mobile-routers {
+      align-items: start;
+      justify-content: start;
+      padding-top: 80px;
+    }
     display: none;
     z-index: 2;
     &.holder {
@@ -151,12 +110,12 @@ export default {
       margin-right: -250px;
       width: 100%;
       background-color: mapget($colors, 'white');
-      box-shadow: 10px 10px 10px 10px;
+      box-shadow: 10px 10px 10px 10px rgba($color: #000000, $alpha: 0);
       position: fixed;
       right: 0;
       top: 0;
       bottom: 0;
-      transition: margin 700ms;
+      transition: margin 700ms ease-in-out, box-shadow 700ms;
 
       .close {
         position: absolute;
@@ -171,7 +130,8 @@ export default {
     }
     &.show {
       margin-right: 0;
-      transition: margin 700ms;
+      box-shadow: 10px 10px 10px 10px rgba($color: mapget($colors, 'primary'), $alpha: 1);
+      transition: margin 700ms ease-in-out, box-shadow 700ms;
     }
   }
 }

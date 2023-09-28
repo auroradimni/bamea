@@ -33,28 +33,28 @@ $break-points: (
 
 $font-sizes: (
   'xs': (
-    'default': 11px,
+    'default': 10px,
     'xxl': 'previous',
     'xl': 'previous',
+    'lg': 'previous',
     'md': 'previous',
     'sm': 'previous',
-    'lg': 'previous',
     'xs': 'previous'
   ),
   'sm': (
-    'default': 14px,
+    'default': 16px,
     'xxl': 'previous',
     'xl': 'previous',
     'lg': 'previous',
-    'md': 'previous',
-    'sm': 'previous',
+    'md': 14px,
+    'sm': 12px,
     'xs': 'previous'
   ),
   'md': (
-    'default': 25px,
+    'default': 18px,
     'xxl': 'previous',
-    'xl': 22px,
-    'lg': 20px,
+    'xl': 'previous',
+    'lg': 17px,
     'md': 'previous',
     'sm': 'previous',
     'xs': 15px
