@@ -47,6 +47,11 @@ export default {
   justify-content: space-between;
   align-items: center;
   max-width: 500px;
+  .router-link-active {
+    border-bottom: 2px solid mapget($colors, 'secondary');
+    color: mapget($colors, 'lightGray');
+  }
+
   & .router-holder {
     flex-direction: column;
   }
